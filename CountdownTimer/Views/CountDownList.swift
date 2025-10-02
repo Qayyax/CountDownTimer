@@ -16,12 +16,16 @@ struct CountDownList: View {
           VStack(alignment: .leading, spacing: 8) {
             if let image = countDown.image {
               image
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
             }
             Text(countDown.name)
             Text(countDown.date.formatted(date: .abbreviated, time: .shortened))
               .foregroundStyle(.secondary)
           }
         }
+        .onDelete(perform: countDownInstance.removeCountDownFromList)
       }
       .toolbar{
         EditButton()
