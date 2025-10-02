@@ -33,6 +33,11 @@ struct NewCountDown: View {
       image = try? await imageItem?
         .loadTransferable(type: Image.self)
     }
+    .toolbar {
+      Button("Save") {
+        print("Saved")
+      }
+    }
   }
 }
 
