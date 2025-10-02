@@ -13,7 +13,7 @@ struct CountDownType: Identifiable {
   var id = UUID()
   var name: String
   var date: Date
-  var image: Data?
+  var image: Image?
 }
 
 @Observable
