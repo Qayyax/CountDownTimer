@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-  var countDownInstance = CountDownClass()
     var body: some View {
           Tabs()
-        .environment(countDownInstance)
     }
 }
 
+//
+//struct ContentView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ContentView()
+//      .environment(CountDownClass())
+//  }
+//}
 
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-      .environment(CountDownClass())
-  }
+#Preview {
+  ContentView()
+    .environment(CountDownClass())
 }

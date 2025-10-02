@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CountdownTimerApp: App {
+  @State private var countDownInstance = CountDownClass()
     var body: some Scene {
         WindowGroup {
             ContentView()
+            .environment(countDownInstance)
         }
     }
 }
